@@ -5,18 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>countdown</title>
-    <style>
-    p {
-    text-align: center;
-    font-size: 60px;
-    margin-top: 0px;
-    }
-    </style>
+
     </head>
     <body>
 
-    <p id="demo"></p>
+    <!--  --><p id="demo"></p>
 
+    <table>
+        <tr>
+            <td><h1>Giorni</h1></td>
+            <td><h1>Ore</h1></td>
+            <td><h1>Minuti</h1></td>
+            <td><h1>Secondi</h1></td>
+        </tr>
+        <tr>
+            <td><h1 id="giorni"></h1></td>
+            <td><h1 id="ore"></h1></td>
+            <td><h1 id="minuti"></h1></td>
+            <td><h1 id="secondi"></h1></td>
+        </tr>
+    </table>
     <script>
     // Set the date we're counting down to
     var countDownDate = new Date("Jun 19, 2024 08:30:00").getTime();
@@ -37,8 +45,12 @@
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
     // Output the result in an element with id="demo"
-    document.getElementById("demo").innerHTML = days + ":" + hours + ":"
-    + minutes + ":" + seconds;
+    //document.getElementById("demo").innerHTML = days + ":" + hours + ":"
+    //+ minutes + ":" + seconds;
+    document.getElementById("secondi").innerHTML = seconds;
+    document.getElementById("minuti").innerHTML = minutes;
+    document.getElementById("ore").innerHTML = hours;
+    document.getElementById("giorni").innerHTML = days;
         
     // If the count down is over, write some text 
     if (distance < 0) {
