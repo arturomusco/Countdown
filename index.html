@@ -4,61 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>countdown</title>
-
-    </head>
-    <body>
-
-    <!--  --><p id="demo"></p>
-
-    <table>
-        <tr>
-            <td><h1>Giorni</h1></td>
-            <td><h1>Ore</h1></td>
-            <td><h1>Minuti</h1></td>
-            <td><h1>Secondi</h1></td>
-        </tr>
-        <tr>
-            <td><h1 id="giorni"></h1></td>
-            <td><h1 id="ore"></h1></td>
-            <td><h1 id="minuti"></h1></td>
-            <td><h1 id="secondi"></h1></td>
-        </tr>
-    </table>
-    <script>
-    // Set the date we're counting down to
-    var countDownDate = new Date("Jun 19, 2024 08:30:00").getTime();
-
-    // Update the count down every 1 second
-    var x = setInterval(function() {
-
-    // Get today's date and time
-    var now = new Date().getTime();
-        
-    // Find the distance between now and the count down date
-    var distance = countDownDate - now;
-        
-    // Time calculations for days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        
-    // Output the result in an element with id="demo"
-    //document.getElementById("demo").innerHTML = days + ":" + hours + ":"
-    //+ minutes + ":" + seconds;
-    document.getElementById("secondi").innerHTML = seconds;
-    document.getElementById("minuti").innerHTML = minutes;
-    document.getElementById("ore").innerHTML = hours;
-    document.getElementById("giorni").innerHTML = days;
-        
-    // If the count down is over, write some text 
-    if (distance < 0) {
-        clearInterval(x);
-        document.getElementById("demo").innerHTML = "EXPIRED";
-    }
-    }, 1000);
-    </script>
-
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="headline">Maturità 2024</h1>
+        <div id="countdown">
+          <ul>
+            <li><span id="days"></span>giorni</li>
+            <li><span id="hours"></span>ore</li>
+            <li><span id="minutes"></span>minuti</li>
+            <li><span id="seconds"></span>secondi</li>
+          </ul>
+        </div>
+        <div id="content" class="emoji">
+          <span>🥳</span>
+          <span>🎉</span>
+          <span>🎂</span>
+        </div>
+      </div>
+      <script src="file.js"></script>
 </body>
 </html>
